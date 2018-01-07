@@ -17,47 +17,9 @@ By using sniproxy and the lancache configuration file, requests from client mach
 
 # Installation
 
-Clone this repository
+1. `git clone https://github.com/zeropingheroes/lancache-sniproxy.git && cd lancache-sniproxy`
 
-`mkdir -p /var/git && cd /var/git && git clone https://github.com/zeropingheroes/lancache-sniproxy.git`
-
-Clone the sniproxy repository
-
-`cd /usr/local/src/ && git clone https://github.com/dlundquist/sniproxy.git && cd sniproxy`
-
-Install dependencies for sniproxy
-
-`sudo apt-get install autotools-dev cdbs debhelper dh-autoreconf dpkg-dev gettext libev-dev libpcre3-dev libudns-dev pkg-config`
-
-Compile Debian package for sniproxy
-
-`./autogen.sh && dpkg-buildpackage`
-
-Install the Debian package
-
-`sudo dpkg -i ../sniproxy_0.4.0+git.29.gb2f0b34_amd64.deb`
-
-Move the default configuration file
-
-`mv /etc/sniproxy.conf /etc/sniproxy.conf.orig`
-
-Install the lancache sniproxy configuration file
-
-`ln -s /var/git/lancache-sniproxy/etc/sniproxy.conf /etc/sniproxy.conf`
-
-Set sniproxy to start at boot
-
-`systemctl enable sniproxy`
-
-# Updating
-
-Simply update git
-
-Run `git pull` in `/var/git/lancache-sniproxy`
-
-Then restart sniproxy
-
-`systemctl restart sniproxy`
+2. `./install.sh`
 
 ## Installation Problems
 
