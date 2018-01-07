@@ -21,10 +21,3 @@ By using sniproxy and the lancache configuration file, requests from client mach
 
 2. `./install.sh`
 
-## Installation Problems
-
-If you get a dependency error during compilation for PCRE, set this flag to ignore libraries compiled from source.
-This error is a result of compiling PCRE from source.
-
-`export DEB_DH_SHLIBDEPS_ARGS_ALL=--dpkg-shlibdeps-params=--ignore-missing-info`
-
