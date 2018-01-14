@@ -50,6 +50,9 @@ mv /etc/sniproxy.conf /etc/sniproxy.conf.example
 # Install the configuration file
 ln -s $SCRIPT_DIR/configs/sniproxy.conf /etc/sniproxy.conf
 
+# Remove the defaults file (which by default contains ENABLED=0)
+rm -f /etc/defaults/sniproxy
+
 # Set the service to run at boot
 /bin/systemctl enable sniproxy
 
