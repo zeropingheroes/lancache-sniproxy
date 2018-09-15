@@ -15,9 +15,12 @@ When running a lancache, the above domains resolve to your lancache's IP address
 
 By using sniproxy and the lancache configuration file, requests from client machines to content providers over HTTPS will be proxied to the upstream server and fulfilled.
 
+# Requirements
+
+* Must be run on the same host as the `lancache`
+* Port 443 must be available - disable any configs in /etc/nginx/sites-enabled which listen on 443/https
+
 # Installation
 
 1. `git clone https://github.com/zeropingheroes/lancache-sniproxy.git && cd lancache-sniproxy`
-
 2. `./install.sh`
-
