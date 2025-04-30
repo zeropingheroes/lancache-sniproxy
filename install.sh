@@ -44,9 +44,6 @@ cd /var/git && rm -f *-dbg* *.xz *.dsc *.changes && mv *.deb /tmp/sniproxy
 # Install the package
 /usr/bin/dpkg -i /tmp/sniproxy/*.deb
 
-# Move the example configuration file
-mv /etc/sniproxy.conf /etc/sniproxy.conf.example
-
 # Install the configuration file
 ln -s $SCRIPT_DIR/configs/sniproxy.conf /etc/sniproxy.conf
 
